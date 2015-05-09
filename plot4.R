@@ -7,6 +7,7 @@ c.date<-date
 time<-paste(c.date,c.time)
 as.character(time)
 alldata$Date<-strptime(time,format="%Y-%m-%d %H:%M:%S")
+
 par(mfrow=c(2,2),mar=c(4,4,2,1),oma=c(0,0,2,0))
 plot(alldata$Date,alldata$Global_active_power,col="transparent",ylab="Global Active Power (kilowatts)",xlab="")
 lines(x=alldata$Date,y=alldata$Global_active_power)
