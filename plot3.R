@@ -7,6 +7,7 @@ c.date<-date
 time<-paste(c.date,c.time)
 as.character(time)
 alldata$Date<-strptime(time,format="%Y-%m-%d %H:%M:%S")
+
 plot(alldata$Date,alldata$Sub_metering_1,col="transparent",ylab="Energy sub metering",xlab="")
 lines(x=alldata$Date,y=alldata$Sub_metering_1,col="black")
 points(alldata$Date,alldata$Sub_metering_2,col="transparent")
